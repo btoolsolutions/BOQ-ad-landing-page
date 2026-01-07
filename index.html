@@ -3,156 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BOQ Description Tool – Demo</title>
+  <title>Professional BOQ Description Tool | bTool Solutions</title>
 
   <style>
+    :root {
+      --primary: #1a56db; /* Professional Blue */
+      --whatsapp: #25D366;
+      --text-dark: #111827;
+      --text-light: #4b5563;
+      --bg: #f9fafb;
+    }
+
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f4f6f8;
-      color: #1f2937;
+      font-family: 'Inter', -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.5;
     }
 
     .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e5edff;
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 16px 0;
+      letter-spacing: -0.025em;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--text-light);
+      margin-bottom: 24px;
     }
 
     .card {
       background: #ffffff;
-      border-radius: 14px;
-      padding: 22px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    }
-
-    h1 {
-      font-size: 28px;
-      text-align: center;
-      margin-bottom: 8px;
-    }
-
-    .subtitle {
-      text-align: center;
-      font-size: 16px;
-      color: #6b7280;
-      margin-bottom: 22px;
-    }
-
-    .video-wrapper {
-      border-radius: 12px;
+      border-radius: 20px;
       overflow: hidden;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border: 1px solid #e5e7eb;
+    }
+
+    .video-container {
+      position: relative;
       background: #000;
+      line-height: 0;
     }
 
     video {
       width: 100%;
       height: auto;
-      display: block;
     }
 
-    .steps {
-      margin: 28px 0 10px;
+    .content {
+      padding: 32px;
+    }
+
+    .features {
+      margin: 0 0 32px 0;
       padding: 0;
       list-style: none;
     }
 
-    .steps li {
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      padding: 14px 16px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      font-size: 15px;
+    .features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 16px;
+      color: var(--text-light);
     }
 
-    .cta {
-      margin-top: 28px;
+    .features li::before {
+      content: "✓";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background: var(--whatsapp);
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .cta-box {
       text-align: center;
     }
 
-    .cta a {
+    .btn {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      background: #25D366;
-      color: #ffffff;
-      padding: 14px 22px;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--whatsapp);
+      color: white;
+      padding: 18px 32px;
       border-radius: 12px;
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      width: 100%;
+      box-sizing: border-box;
     }
 
-    .cta a:hover {
-      opacity: 0.95;
+    .btn:hover {
+      transform: scale(1.02);
     }
 
-    .whatsapp-icon {
-      width: 22px;
-      height: 22px;
-      fill: white;
+    .btn svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    .trust-tag {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #9ca3af;
     }
 
     .footer {
       text-align: center;
-      font-size: 13px;
+      margin-top: 40px;
+      font-size: 14px;
       color: #9ca3af;
-      margin-top: 26px;
     }
 
     @media (max-width: 480px) {
-      h1 {
-        font-size: 24px;
-      }
+      h1 { font-size: 28px; }
+      .content { padding: 24px; }
     }
   </style>
 </head>
-
 <body>
 
   <div class="container">
+    <div class="header">
+      <span class="badge">Efficiency for Estimators</span>
+      <h1>Stop Wasting Hours on BOQ Descriptions</h1>
+      <p class="subtitle">Generate professional, Excel-ready BOQs in seconds. Accuracy guaranteed.</p>
+    </div>
+
     <div class="card">
-
-      <h1>Create professional BOQ descriptions in seconds</h1>
-      <p class="subtitle">
-        No manual typing • Consistent format • Excel-ready BOQs
-      </p>
-
-      <!-- VIDEO -->
-      <div class="video-wrapper">
-        <video controls playsinline>
+      <div class="video-container">
+        <video controls playsinline poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
           <source src="BOQ Description Tool Create professional BOQ descriptions easily.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
 
-      <!-- STEPS -->
-      <ul class="steps">
-        <li>1️⃣ Select space and item</li>
-        <li>2️⃣ Click “Add”</li>
-        <li>3️⃣ BOQ description is generated instantly</li>
-      </ul>
+      <div class="content">
+        <ul class="features">
+          <li><strong>Instant Generation:</strong> Select your space/item and let the tool write the technical specs.</li>
+          <li><strong>Standardized Format:</strong> Ensure consistency across every project and every tender.</li>
+          <li><strong>Zero Errors:</strong> Eliminates manual typing mistakes that lead to costly project disputes.</li>
+          <li><strong>Excel Compatible:</strong> Seamlessly move your data into your existing workflow.</li>
+        </ul>
 
-      <!-- CTA -->
-      <div class="cta">
-        <a href="https://wa.me/918129048805?text=Hi%20Suhaib%2C%20I%20saw%20the%20BOQ%20demo%20and%20would%20like%20to%20try%20the%20tool."
-           target="_blank">
-
-          <!-- WhatsApp SVG Icon -->
-          <svg class="whatsapp-icon" viewBox="0 0 32 32">
-            <path d="M19.11 17.44c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.66 1.12 2.84c.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.57.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.02 3C9.39 3 4 8.39 4 15.02c0 2.65.86 5.1 2.33 7.08L4 29l7.1-2.29a12 12 0 005.92 1.52c6.63 0 12.02-5.39 12.02-12.02C29.04 8.39 22.65 3 16.02 3zm0 21.8c-2.42 0-4.68-.71-6.6-1.93l-.47-.3-4.2 1.35 1.37-4.09-.31-.48a9.8 9.8 0 01-1.5-5.24c0-5.43 4.42-9.85 9.85-9.85 5.43 0 9.85 4.42 9.85 9.85 0 5.43-4.42 9.85-9.85 9.85z"/>
-          </svg>
-
-          Get the BOQ Tool on WhatsApp
-        </a>
+        <div class="cta-box">
+          <a href="https://wa.me/918129048805?text=Hi%20Suhaib%2C%20I%20saw%20the%20BOQ%20demo%20and%20would%20like%20to%20try%20the%20tool." class="btn">
+            <svg viewBox="0 0 32 32">
+              <path d="M19.11 17.44c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.66 1.12 2.84c.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.57.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.02 3C9.39 3 4 8.39 4 15.02c0 2.65.86 5.1 2.33 7.08L4 29l7.1-2.29a12 12 0 005.92 1.52c6.63 0 12.02-5.39 12.02-12.02C29.04 8.39 22.65 3 16.02 3zm0 21.8c-2.42 0-4.68-.71-6.6-1.93l-.47-.3-4.2 1.35 1.37-4.09-.31-.48a9.8 9.8 0 01-1.5-5.24c0-5.43 4.42-9.85 9.85-9.85 5.43 0 9.85 4.42 9.85 9.85 0 5.43-4.42 9.85-9.85 9.85z"/>
+            </svg>
+            Claim Your Free Demo
+          </a>
+          <p class="trust-tag">Join 100+ Quantity Surveyors using bTool</p>
+        </div>
       </div>
+    </div>
 
-      <div class="footer">
-        © bTool Solutions
-      </div>
-
+    <div class="footer">
+      &copy; 2024 bTool Solutions. All rights reserved.
     </div>
   </div>
 

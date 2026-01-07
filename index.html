@@ -7,115 +7,154 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      color: #222;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
     }
+
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
       padding: 20px;
     }
-    h1 {
-      text-align: center;
-      font-size: 26px;
-      margin-bottom: 10px;
+
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
     }
-    p.sub {
+
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
       text-align: center;
       font-size: 16px;
-      color: #555;
-      margin-bottom: 20px;
+      color: #6b7280;
+      margin-bottom: 22px;
     }
-    .video-box {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
+
+    .video-wrapper {
+      border-radius: 12px;
       overflow: hidden;
-      border-radius: 8px;
       background: #000;
     }
-    .video-box iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
+
+    video {
       width: 100%;
-      height: 100%;
+      height: auto;
+      display: block;
     }
+
     .steps {
-      margin: 30px 0;
+      margin: 28px 0 10px;
       padding: 0;
       list-style: none;
     }
+
     .steps li {
-      background: #fff;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      padding: 14px 16px;
+      border-radius: 10px;
       margin-bottom: 10px;
-      padding: 12px;
-      border-radius: 6px;
       font-size: 15px;
     }
+
     .cta {
+      margin-top: 28px;
       text-align: center;
-      margin-top: 30px;
     }
+
     .cta a {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
       background: #25D366;
-      color: #fff;
-      padding: 14px 24px;
+      color: #ffffff;
+      padding: 14px 22px;
+      border-radius: 12px;
       font-size: 18px;
-      border-radius: 6px;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: bold;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
     }
+
+    .cta a:hover {
+      opacity: 0.95;
+    }
+
+    .whatsapp-icon {
+      width: 22px;
+      height: 22px;
+      fill: white;
+    }
+
     .footer {
       text-align: center;
       font-size: 13px;
-      color: #777;
-      margin-top: 30px;
+      color: #9ca3af;
+      margin-top: 26px;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <div class="container">
+    <div class="card">
 
-    <h1>Create professional BOQ descriptions in seconds</h1>
-    <p class="sub">
-      No manual typing. Consistent format. Excel-ready BOQs.
-    </p>
+      <h1>Create professional BOQ descriptions in seconds</h1>
+      <p class="subtitle">
+        No manual typing • Consistent format • Excel-ready BOQs
+      </p>
 
-    <!-- DEMO VIDEO -->
-    <div class="video-box">
-      <iframe 
-        src="https://drive.google.com/file/d/1DySefG3yV-gyKM7fPfllEDB3FTQed_8H/preview"
-        allow="autoplay"
-        allowfullscreen>
-      </iframe>
+      <!-- VIDEO -->
+      <div class="video-wrapper">
+        <video controls playsinline>
+          <source src="BOQ Description Tool Create professional BOQ descriptions easily.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- STEPS -->
+      <ul class="steps">
+        <li>1️⃣ Select space and item</li>
+        <li>2️⃣ Click “Add”</li>
+        <li>3️⃣ BOQ description is generated instantly</li>
+      </ul>
+
+      <!-- CTA -->
+      <div class="cta">
+        <a href="https://wa.me/918129048805?text=Hi%20Suhaib%2C%20I%20saw%20the%20BOQ%20demo%20and%20would%20like%20to%20try%20the%20tool."
+           target="_blank">
+
+          <!-- WhatsApp SVG Icon -->
+          <svg class="whatsapp-icon" viewBox="0 0 32 32">
+            <path d="M19.11 17.44c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.66 1.12 2.84c.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.57.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.02 3C9.39 3 4 8.39 4 15.02c0 2.65.86 5.1 2.33 7.08L4 29l7.1-2.29a12 12 0 005.92 1.52c6.63 0 12.02-5.39 12.02-12.02C29.04 8.39 22.65 3 16.02 3zm0 21.8c-2.42 0-4.68-.71-6.6-1.93l-.47-.3-4.2 1.35 1.37-4.09-.31-.48a9.8 9.8 0 01-1.5-5.24c0-5.43 4.42-9.85 9.85-9.85 5.43 0 9.85 4.42 9.85 9.85 0 5.43-4.42 9.85-9.85 9.85z"/>
+          </svg>
+
+          Get the BOQ Tool on WhatsApp
+        </a>
+      </div>
+
+      <div class="footer">
+        © bTool Solutions
+      </div>
+
     </div>
-
-    <!-- HOW IT WORKS -->
-    <ul class="steps">
-      <li>1️⃣ Select space and item</li>
-      <li>2️⃣ Click add</li>
-      <li>3️⃣ BOQ description is generated instantly</li>
-    </ul>
-
-    <!-- CTA -->
-    <div class="cta">
-      <a 
-        href="https://wa.me/918129048805?text=Hi%20Suhaib%2C%20I%20saw%20the%20BOQ%20demo%20and%20would%20like%20to%20try%20the%20tool."
-        target="_blank">
-        Get the BOQ Tool on WhatsApp
-      </a>
-    </div>
-
-    <div class="footer">
-      © bTool Solutions
-    </div>
-
   </div>
+
 </body>
 </html>

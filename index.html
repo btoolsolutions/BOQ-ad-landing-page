@@ -7,9 +7,8 @@
 
   <style>
     :root {
-      --primary-blue: #1e40af;
-      --whatsapp-green: #1E40AF;
-      --dark-btn: #128C7E; /* Darker green for contrast */
+      --navy-blue: #1e40af;
+      --whatsapp-green: #25D366; /* Corrected to WhatsApp Green */
       --text-main: #1f2937;
       --text-muted: #4b5563;
     }
@@ -23,7 +22,7 @@
     }
 
     .container {
-      max-width: 500px; /* Optimized for mobile view */
+      max-width: 500px;
       margin: 0 auto;
       padding: 20px;
     }
@@ -53,7 +52,6 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
-    /* Video Section */
     .video-wrapper {
       background: #000;
       line-height: 0;
@@ -63,7 +61,6 @@
       display: block;
     }
 
-    /* Features List Fix */
     .content {
       padding: 24px;
     }
@@ -81,7 +78,7 @@
     }
 
     .check-icon {
-      color: var(--whatsapp-green);
+      color: var(--navy-blue);
       font-size: 20px;
       margin-right: 12px;
       flex-shrink: 0;
@@ -99,16 +96,16 @@
       margin-bottom: 2px;
     }
 
-    /* CTA Button Fix */
     .cta-container {
       text-align: center;
     }
 
+    /* Fixed Button Style */
     .whatsapp-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: var(--whatsapp-green);
+      background-color: var(--navy-blue);
       color: white;
       text-decoration: none;
       padding: 16px;
@@ -124,10 +121,10 @@
     }
 
     .whatsapp-btn svg {
-      width: 32px; /* Increased Size */
+      width: 32px;
       height: 32px;
       margin-right: 12px;
-      fill: white;
+      fill: var(--whatsapp-green); /* WhatsApp Icon is now Green */
     }
 
     .social-proof {
@@ -167,7 +164,7 @@
             <span class="check-icon">✓</span>
             <div class="feature-text">
               <strong>Instant BOQ Descriptions</strong>
-              Select space and item  professional BOQ text is generated automatically.
+              Select space and item — professional BOQ text is generated automatically.
             </div>
           </div>
           <div class="feature-item">
@@ -187,7 +184,7 @@
         </div>
 
         <div class="cta-container">
-          <a href="https://wa.me/918129048805?text=Hi%20Suhaib%2C%20I%20saw%20the%20BOQ%20demo%20and%20would%20like%20to%20try%20the%20tool." class="blue-btn">
+          <a href="https://wa.me/918129048805?text=Hi%2C%20I%20saw%20the%20BOQ%20demo%20and%20would%20like%20to%20try%20the%20tool." class="whatsapp-btn">
             <svg viewBox="0 0 32 32">
               <path d="M19.11 17.44c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.66 1.12 2.84c.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.57.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.02 3C9.39 3 4 8.39 4 15.02c0 2.65.86 5.1 2.33 7.08L4 29l7.1-2.29a12 12 0 005.92 1.52c6.63 0 12.02-5.39 12.02-12.02C29.04 8.39 22.65 3 16.02 3zm0 21.8c-2.42 0-4.68-.71-6.6-1.93l-.47-.3-4.2 1.35 1.37-4.09-.31-.48a9.8 9.8 0 01-1.5-5.24c0-5.43 4.42-9.85 9.85-9.85 5.43 0 9.85 4.42 9.85 9.85 0 5.43-4.42 9.85-9.85 9.85z"/>
             </svg>
